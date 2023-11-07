@@ -1,19 +1,27 @@
-// Assignment code here
+var generateBtn = document.querySelector("#generate");
+
 function generatePassword() {
     // ADD CODE HERE
-  }
+    var password = "";
+    // Get references to the #generate element
+    var lowercaseChars = "abcdefghijklmnopqrstuvwxyz" 
+    var uppercaseChars = "";
+    var numeric = 123456789;
+    var specialChar = "!,#,$,%,&,',(,),*,+,-,.,/,:,;,<,=,>,?,@,[,],^,_,`,{,|,},~,";
+    var lengthInput = "12";
+    var hasUppercase = true;
+    var hasNumeric = false;
+    var hasLowercase = false;
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-var chars = "abcde";
-var result = "";
-
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i < lengthInput; i++) {
   var random = Math.floor(Math.random() * chars.length);
   result += chars[random];
+} 
+console.log
+    return "password";
 }
 
-console.log(result); // Theoretical output - "cae";
+console.log(result); 
 
 // Write password to the #password input
 function writePassword() {
