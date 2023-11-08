@@ -2,13 +2,14 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
    
-    var password = "";
-    var possibleChars = "";
+    var password = " ";
+    var possibleChars = " ";
     var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    var capChar = lowercaseChars.toUpperCase("");
-    var integers = 123456789;
-    //var SpecialChar = "!#$%&'()*+-./:;<=>?@[]^_`{|}~";
+    var Uppercase = "A", "B","C","D",EFGHIJKLMNOPQRSTUVWXYZ;
+    var integers = ["0","1","2","3","4","5","6","7", "8", "9"];
+    var SpecialChar = "!#$%&'()*+-./:;<=>?@[]^_`{|}~";
     var lengthInput = "8";
+    
     // inserted boolean below
     var hasLowercase = true
     var hasUppercase = true;
@@ -36,7 +37,7 @@ function generatePassword() {
         password += possibleChars[random];
     }
     console.log
-    return "password";
+    return password;
 }
 
 
