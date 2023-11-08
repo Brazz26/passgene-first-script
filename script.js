@@ -5,16 +5,17 @@ function generatePassword() {
     var password = "";
     var possibleChars = "";
     var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    //var uppercaseChars = lowercaseChars.toUpperCase("");
-    var Numeric = 123456789;
+    var capChar = lowercaseChars.toUpperCase("");
+    var integers = 123456789;
     //var SpecialChar = "!#$%&'()*+-./:;<=>?@[]^_`{|}~";
-    var lengthInput = "12";
+    var lengthInput = "8";
     // inserted boolean below
     var hasLowercase = true
     var hasUppercase = true;
     var hasNumeric = true;
     var hasSpecialChars = true;
 
+    //confirms below
     console.log("Would you like your password to include lowercase?")
     if (!hasLowercase || !hasUppercase) {
         alert("Choose at least one character type.");
@@ -55,4 +56,3 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-generateBtn();
