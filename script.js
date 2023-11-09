@@ -40,7 +40,7 @@ function generatePassword() {
     }
 
 
-    if (!hasSpecialChars || !hasNumeric) {
+    if (!hasSpecialChars && !hasNumeric) {
         alert("Please choose at least one special character");
         return null;
     }
