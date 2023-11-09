@@ -5,50 +5,48 @@ function generatePassword() {
     var password = " ";
     var possibleChars = " ";
     var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    var Uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-    var Numeric = ("0","1","2","3","4","5","6","7", "8","9");
-    var SpecialChar = ["!","#","$",".","%","&","+","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
-    var lengthInput = "8";
+    var Uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var Numeric = "0123456789";
+    var SpecialChar = "!@#$%^&*()+={}[]:;<>,./?|~";
+    var lengthInput = window.prompt("Please choose character length no less than 8, no more than 128");
+    if (lengthInput < 8 || lengthInput > 128) {
+        alert("Please choose a number between 8 and 128")
+    }
     
-    // inserted boolean below
-    var hasLowercase = true
-    var hasUppercase = true;
-    var hasNumeric = true;
-    var hasSpecialChars = true;
+   
 
     //confirms below
     
-    if (!hasLowercase || !hasUppercase) {
-        alert("Choose at least one character type.");
-        return;
-    }
+    
     var hasLowercase = window.confirm("Would you like to include lowercase characters?");
     if (hasLowercase) {
         possibleChars += lowercaseChars;
     } 
     var hasUppercase = window.confirm("Would you like to include capital letters?");
-    if(hasUppercase) {
-        possibleChars += Uppercase
+    if (hasUppercase) {
+        possibleChars += Uppercase;
     }
-
+    if (!hasLowercase && !hasUppercase) {
+        alert("Please choose at least one character type.");
+        return null;
+    }
     var hasNumeric = window.confirm("Would you like to include numbers?");
-    if(hasNumeric) {
-        possibleChars += Numeric
+    if (hasNumeric) {
+        possibleChars += Numeric;
     }
     var hasSpecialChars = window.confirm("Would you like to include special characters?")
-    if(hasSpecialChars) {
+    if (hasSpecialChars) {
         possibleChars += SpecialChar
     }
 
-//if (window.confirm("Would you like to have special characters?"))
-   // if (!hasSpecialChars || !hasNumeric) {
-   //     alert("Please choose at least one special character");
-   // } else if(hasNumeric) {
-   //     possibleChars += Numeric
-    //}
+
+    if (!hasSpecialChars || !hasNumeric) {
+        alert("Please choose at least one special character");
+        return null;
+    }
 
     for (var i = 0; i < lengthInput; i++) {
-        var random = Math.floor(Math.random() * lowercaseChars.length);
+        var random = Math.floor(Math.random() * possibleChars.length);
         password += possibleChars[random];
     }
     console.log
