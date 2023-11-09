@@ -5,9 +5,9 @@ function generatePassword() {
     var password = " ";
     var possibleChars = " ";
     var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    var Uppercase = "A", "B","C","D",EFGHIJKLMNOPQRSTUVWXYZ;
-    var integers = ["0","1","2","3","4","5","6","7", "8", "9"];
-    var SpecialChar = "!#$%&'()*+-./:;<=>?@[]^_`{|}~";
+    var Uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    var Numeric = ["0","1","2","3","4","5","6","7", "8","9"];
+    var SpecialChar = ["!","#","$",".","%","&","+","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
     var lengthInput = "8";
     
     // inserted boolean below
